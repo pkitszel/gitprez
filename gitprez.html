@@ -194,7 +194,7 @@ pauza, troche bash'a, ., root, uzytkownicy, *, quote, ENV, EDITOR, historia, ...
 <span>&num;</span> dodanie aliasu na najnowszy git, wystarczy raz,
 <span>&num;</span> (bedzie w nowych terminalach, przy pierwszym uzyciu zaciaga pliki)
 
-echo 'alias git24="docker run -ti --rm -v $(pwd):/git -v $HOME/.ssh:/root/.ssh bitnami/git:2.24.0"' \<br>&Tab;>> ~/.bashrc && source .bashrc</pre>
+echo "alias git24='docker run -ti --rm -v \"\$(pwd)\":/root -w /root -v \$HOME/.ssh:/root/.ssh bitnami/git:2.24.0'" \<br>&Tab;>> ~/.bashrc && source .bashrc</pre>
 
 
 ---
