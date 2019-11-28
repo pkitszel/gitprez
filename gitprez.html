@@ -194,6 +194,98 @@ pauza, troche bash'a, ., root, uzytkownicy, *, quote, ENV, EDITOR, historia, ...
 
 echo 'alias git24="docker run -ti --rm -v $(pwd):/git -v $HOME/.ssh:/root/.ssh bitnami/git:2.24.0"' \<br>&Tab;>> ~/.bashrc && source .bashrc</pre>
 
+
+---
+#git show
+
+	git show
+	git show --name-only
+
+---
+#git tag
+
+* lekki, po prostu taki jakby alias na commit (lub cos innego niz commit)
+* pelny, annotated - zawiera date, autora, komentarz
+
+		git tag    lekki-tag  53ea558585
+		git tag -a lepszy-tag f385887c0f
+
+<pre style="font-size: 50%">
+<span style="color:olive;">commit 53ea558585bdd05d27e401025d09720d47c9de26</span> (tag: lekki-tag)
+Author: Przemek Kitszel <span>&lt;</span>pkitszel@gmail.com&gt;
+Date:   Thu Nov 28 01:03:13 2019 +0100
+
+    Describe minimum line history building skills
+
+<span style="font-weight:bold;">diff &minus;&minus;git a/gitprez.html b/gitprez.html</span>
+<span style="font-weight:bold;">index 3a84934..e9d61ab 100644</span>
+<span style="font-weight:bold;">&minus;&minus;&minus; a/gitprez.html</span>
+<span style="font-weight:bold;">+++ b/gitprez.html</span>
+<span style="color:teal;">@@ &minus;150,6 +150,35 @@</span> stworzenie globalnego na linuksie, plik: `~/.gitconfig`
+ &Tab;<span>&lsqb;</span>diff&rbrack;
+ &Tab;&Tab;algorithm = histogram
+ 
+<span style="color:green;">+</span><span style="color:green;">&minus;&minus;&minus;</span>
+<span style="color:green;">+</span><span style="color:green;">#Nowe repo</span>
+<span style="color:green;">+</span><span style="color:green;">(najpierw idziemy do ladnie nazwanego folderu)</span>
+<span style="color:green;">+</span>
+<span style="color:green;">+</span>&Tab;<span style="color:green;">git init</span>
+<span style="color:green;">+</span><span style="color:green;">przydatne w malych projektach</span>
+(...)
+</pre>
+
+
+---
+#git tag
+
+* lekki, po prostu taki jakby alias na commit (lub cos innego niz commit)
+* pelny, annotated - zawiera date, autora, komentarz
+
+		git tag    lekki-tag  53ea558585
+		git tag -a lepszy-tag f385887c0f
+
+<pre style="font-size: 50%">
+<span style="color:olive;">tag lepszy&minus;tag</span>
+Tagger: Przemek Kitszel <span>&lt;</span>pkitszel@gmail.com&gt;
+Date:   Thu Nov 28 01:20:35 2019 +0100
+
+Pelny opis
+
+<span style="color:olive;">commit f385887c0f6167045c6f7411b4fd708608f87465</span> (tag: lepszy-tag)
+Author: Przemek Kitszel <span>&lt;</span>pkitszel@gmail.com&gt;
+Date:   Thu Nov 28 00:52:27 2019 +0100
+
+    Describe git config
+
+<span style="font-weight:bold;">diff &minus;&minus;git a/gitprez.html b/gitprez.html</span>
+<span style="font-weight:bold;">index 835e332..3a84934 100644</span>
+<span style="font-weight:bold;">&minus;&minus;&minus; a/gitprez.html</span>
+<span style="font-weight:bold;">+++ b/gitprez.html</span>
+<span style="color:teal;">@@ &minus;132,6 +132,25 @@</span> konsola to podstawa, ale sa tez graficzne narzedzia
+ 
+ &Tab;git komenda pliki wersje
+  
+<span style="color:green;">+</span><span style="color:green;">&minus;&minus;&minus;</span>
+<span style="color:green;">+</span><span style="color:green;"># git config</span>
+<span style="color:green;">+</span><span style="color:green;">nazwa, email, jest lokalne=per projekt i globalne</span>
+(...)
+</pre>
+
+
+---
+#HEAD
+	git reflog
+	git checkout --detach
+	git checkout lekki-tag
+
+---
+#git branch
+czyli tag ktory podaza
+
+	git checkout -b nowy-branczA # to trzeba zapamietac
+	git switch   -c nowy-branczB # od gita 2.23
+
+
     </textarea>
     <script src="remark.min.js" type="text/javascript">
     </script>
