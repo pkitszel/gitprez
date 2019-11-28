@@ -179,6 +179,20 @@ pauza, troche bash'a, ., root, uzytkownicy, *, quote, ENV, EDITOR, historia, ...
 	git diff --cached
 	git status
 	git status -s
+---
+# nie tylko git add
+	git rm
+	git mv
+###	.gitignore
+	git restore # od gita 2.23, łatwo sie pobawić w dockerze tym
+	git switch  # od gita 2.23, łatwo sie pobawić w dockerze tym
+	git reset
+	git checkout
+<pre style="font-size: 50%">
+<span>&num;</span> dodanie aliasu na najnowszy git, wystarczy raz,
+<span>&num;</span> (bedzie w nowych terminalach, przy pierwszym uzyciu zaciaga pliki)
+
+echo 'alias git24="docker run -ti --rm -v $(pwd):/git -v $HOME/.ssh:/root/.ssh bitnami/git:2.24.0"' \<br>&Tab;>> ~/.bashrc && source .bashrc</pre>
 
     </textarea>
     <script src="remark.min.js" type="text/javascript">
